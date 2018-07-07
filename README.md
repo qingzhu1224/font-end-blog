@@ -3,8 +3,13 @@
 
 **html**
 -------------
->1.DOM
+>1.DOM是指什么
 
+>2.doctype是什么？举例常见的doctype以及特点
+
+>3.html全局属性有哪些？
+
+>4.什么时web语义化？有什么好处
 
 **css**
 -------------
@@ -44,8 +49,27 @@
 
 >18.png/gif/jpeg区别
 
->19.如何垂直居中一个<img>标签
+>19.如何垂直居中一个img标签
 
+>20.img标签的title和alt区别
+
+>21.css选择器有哪些
+
+>22.css sprite是什么？有什么优缺点？
+
+>23.css hack原理是什么？以及常用hack?
+
+>24.渐进增强和优雅降级
+
+>25.`display: block|inline-block|inline`区别
+
+>26.`position: static | relative | absolute | fixed`;
+
+>27.special value | computed value | used value区别
+
+>28.src和herf区别
+
+>30.
 
 
 **javascript**
@@ -82,7 +106,6 @@
 
 >16.forEach和map以及reduce区别
 
-
 >17.    
         function A() {}   
         var a1 = new A()  var a2 = new A();
@@ -112,7 +135,12 @@
 
 >27.实现数组随机排序
 
->28.
+>28.      
+
+     //去除字符串前后空格 
+    str.trim()
+    正则表达式
+
 
 
 **javascript DOM**
@@ -141,7 +169,16 @@
 
 >12.window.onload和DOMContentLoad区别
 
->13.
+>13.mouseover/mouseout  mouseenter/mouseleave区别
+
+>14.addListener写法
+
+>15.offsetWidth/offsetHeight/scrollWidth/scrollHeight区别
+
+>16.getScrollOffset封装
+
+>17.获取窗口大小
+
 
 **http方面**
 --------------
@@ -171,7 +208,6 @@
 
 >4.解析url(正则方法)
 
-
 **react**
 ----------------
 >1.实际项目中遇到哪些困难
@@ -180,20 +216,16 @@
 
 >3.提高react性能
 
-
-
 **vue**
 ---------------
 >1.vue-router
 
 >2.slot
 
-
 **webpack**
 ==========
 
 >1.code spliting
-
 
 **安全方面**
 --------------
@@ -204,7 +236,6 @@
 >3.跨域
 
 >4.JSONP实现，使用时有什么问题
-
 
 **其他**
 --------------
@@ -228,7 +259,12 @@
 
 >10.resetfull
 
->11.
+>11.前端要注意哪些SEO
+
+>12.浏览器内核分别是什么
+
+
+
 
 
 
