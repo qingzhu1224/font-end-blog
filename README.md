@@ -36,6 +36,17 @@
 
 >14.link visited hover active LoVe HAte
 
+>15.三角形
+
+>16.1px的，小于12px的字
+
+>17.px em rem区别
+
+>18.png/gif/jpeg区别
+
+>19.如何垂直居中一个<img>标签
+
+
 
 **javascript**
 -------------
@@ -71,10 +82,37 @@
 
 >16.forEach和map以及reduce区别
 
+
 >17.    
         function A() {}   
         var a1 = new A()  var a2 = new A();
         编写A，使得a1.id // 1; a2.id //2
+
+>18.构造函数中this作用
+
+>19.bind、call以及apply区别
+
+>20.typeof和instanceof区别
+
+>21.实现深度clone
+
+>22. 
+    //创建一个对像的方式以及区别(京东面试)
+    var a = {}
+    var a = new Object()
+    function Person(){}
+    var a = Object.create(Person.prototype)
+>23.说下this的几种不同场景
+
+>24.JS中有哪些内置函数
+
+>25.===和==区别，以及何时使用它们
+
+>26.具体解释下JSONP
+
+>27.实现数组随机排序
+
+>28.
 
 
 **javascript DOM**
@@ -99,6 +137,12 @@
 
 >10.图片懒加载实现
 
+>11.DOM节点中Attribute和property区别
+
+>12.window.onload和DOMContentLoad区别
+
+>13.
+
 **http方面**
 --------------
 >1.状态码
@@ -111,7 +155,7 @@
 
 >5.ajax、fetch和axios区别
 
->6.轮训、长链接、websocke等
+>6.传统轮询、长轮询、服务器发送事件、websocke等
 
 **持久化方面**
 ------------
@@ -159,7 +203,7 @@
 
 >3.跨域
 
->4.JSONP实现
+>4.JSONP实现，使用时有什么问题
 
 
 **其他**
@@ -175,6 +219,17 @@
 >5.OOP
 
 >6.函数式编程
+
+>7.从输入url到看到页面的整个过程
+
+>8.缓存
+
+>9.内存泄漏问题
+
+>10.resetfull
+
+>11.
+
 
 
 
