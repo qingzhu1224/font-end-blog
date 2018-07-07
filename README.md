@@ -1,12 +1,12 @@
-interview font-end
+**interview font-end**
 ====================
 
-html
+**html**
 -------------
 >1.DOM
 
 
-css
+**css**
 -------------
 >1.BFC
 
@@ -36,9 +36,8 @@ css
 
 >14.link visited hover active LoVe HAte
 
->15.
 
-javascript
+**javascript**
 -------------
 >1.什么是闭包？闭包优缺点和适用场景
 
@@ -72,13 +71,13 @@ javascript
 
 >16.forEach和map以及reduce区别
 
->17.
+>17.    
+        function A() {}   
+        var a1 = new A()  var a2 = new A();
+        编写A，使得a1.id // 1; a2.id //2
 
 
-
-
-
-javascript Dom
+**javascript DOM**
 ----------------
 >1.获取元素的方法；
 
@@ -98,8 +97,9 @@ javascript Dom
 
 >9.location
 
+>10.图片懒加载实现
 
-http方面
+**http方面**
 --------------
 >1.状态码
 
@@ -113,11 +113,11 @@ http方面
 
 >6.轮训、长链接、websocke等
 
-持久化方面
+**持久化方面**
 ------------
 >1.cookie session localstorage sessionstorage
 
-算法题目
+**算法题目**
 -----------------
 >1.排序（冒泡、快排、归并）
 
@@ -128,7 +128,7 @@ http方面
 >4.解析url(正则方法)
 
 
-react
+**react**
 ----------------
 >1.实际项目中遇到哪些困难
 
@@ -136,32 +136,45 @@ react
 
 >3.提高react性能
 
->4.
 
 
-vue
+**vue**
 ---------------
 >1.vue-router
 
 >2.slot
 
 
-webpack
+**webpack**
 ==========
 
 >1.code spliting
 
 
-安全方面
+**安全方面**
 --------------
+>1.XSS，怎样预防
 
-其他
+>2.CRFS
+
+>3.跨域
+
+>4.JSONP实现
+
+
+**其他**
 --------------
 >1.SPA
 
 >2.MVVM
 
 >3.订阅发布模式
+
+>4.提高页面性能
+
+>5.OOP
+
+>6.函数式编程
 
 
 
