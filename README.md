@@ -14,7 +14,7 @@ css
 
 >3.盒子模型
 
->4.清楚浮动
+>4.清除浮动
 
 >5.隐藏一个元素方法
 
@@ -24,9 +24,19 @@ css
 
 >8.letter-spacing
 
->9.文字超过范围省略（`overflow: hidden`; ``）
+>9.文字超过范围省略（`overflow: hidden`; `white-space: nowrap`; `text-overflow: ellipsis`）
 
 >10.兼容性问题（从css和js两方面说）
+
+>11.透明的兼容写法
+
+>12.less和sass用处
+
+>13.link和import区别
+
+>14.link visited hover active LoVe HAte
+
+>15.
 
 javascript
 -------------
@@ -48,11 +58,24 @@ javascript
 
 >9.promise介绍
 
->10.作用域
+>10.作用域
 
 >11.创建对象以及继承
 
 >12.原型链
+
+>13.事件循环机制
+
+>14.去抖和节流实现
+
+>15.判断一个数组方法
+
+>16.forEach和map以及reduce区别
+
+>17.
+
+
+
 
 
 javascript Dom
@@ -64,6 +87,17 @@ javascript Dom
 >3.拖拽
 
 >4.增、删、改DOM
+
+>5.阻止默认事件
+
+>6.阻止冒泡
+
+>7.冒泡和事件捕获
+
+>8.事件代理
+
+>9.location
+
 
 http方面
 --------------
@@ -96,12 +130,40 @@ http方面
 
 react
 ----------------
+>1.实际项目中遇到哪些困难
+
+>2.react生命周期
+
+>3.提高react性能
+
+>4.
+
 
 vue
 ---------------
+>1.vue-router
+
+>2.slot
+
+
+webpack
+==========
+
+>1.code spliting
+
 
 安全方面
 --------------
+
+其他
+--------------
+>1.SPA
+
+>2.MVVM
+
+>3.订阅发布模式
+
+
 
 
 
