@@ -139,6 +139,7 @@
     str.trim()
     正则表达式
 
+>29.decodeURIComponent和decodeURI区别
 
 
 **javascript DOM**
@@ -275,6 +276,7 @@
 
 >12.浏览器内核分别是什么
 
+>13.怎样实现单点登录
 
 
 
