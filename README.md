@@ -69,8 +69,6 @@
 
 >28.src和herf区别
 
->30.
-
 
 **javascript**
 -------------
@@ -137,7 +135,7 @@
 
 >28.      
 
-     //去除字符串前后空格 
+    //去除字符串前后空格 
     str.trim()
     正则表达式
 
@@ -206,7 +204,19 @@
 
 >3.数组去重
 
->4.解析url(正则方法)
+>4.     
+    //解析url(正则方法）
+    function getQueryParams(
+    str = window.location.search.slice(1),) {
+    if (!str) return {};
+    return str.split('&').reduce((ret, param) => {
+        const match = param.match(/^(.+)=(.+)$/);
+        if (!match) return ret;
+        return {
+            ...ret,
+            [decodeURIComponent(match[1])]: decodeURIComponent(match[2]),
+        };
+    }, {});}
 
 **react**
 ----------------
@@ -215,6 +225,8 @@
 >2.react生命周期
 
 >3.提高react性能
+
+>4.一个输入框，先输入1，再输入2，再输入1，这个过程，会一直在更新dom吗？
 
 **vue**
 ---------------
