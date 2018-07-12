@@ -69,6 +69,9 @@
 
 >28.src和herf区别
 
+>29.`padding: 100%`，表示按照最近的父元素块的宽度来定;
+
+
 
 **javascript**
 -------------
@@ -229,16 +232,31 @@
 
 >4.一个输入框，先输入1，再输入2，再输入1，这个过程，会一直在更新dom吗？
 
+>5.受控组件：、input或select都要绑定一个change事件;每当表单的状态发生变化,都会被写入组件的state中,这种组件在React中被称为受控组件;
+
+>6.setState机制
+
+>7.react如何加载组件，并说出生命周期
+
+>8.action的好处
+
+
+
 **vue**
 ---------------
 >1.vue-router
 
->2.slot
+>2.[slot](https://www.w3cplus.com/vue/vue-slot.html);是指vue的内容分发，也称插槽。它显示与否以及怎么显示完全是由父组件来控制。具体显示位置由子组件自身决定。分为单个插槽、具名插槽（slot）以及作用域插槽(slot-scoped)。
 
+>3.计算属性：模板内的表达式非常便利，如果放入太多的逻辑会让模版过重而难以维护。计算属性和方法的区别是：计算属性是基于依赖进行缓存；侦听器：当需要在数据变化时执行异步或开销较大的操作时，这个方法有用。watch.
 **webpack**
 ==========
 
 >1.code spliting
+
+>2.webpack 3 和 webpack 4的区别;去除commonchunk plugin 改用 webpack.optimize.SplitChunksPlugin
+
+>3.webpack的插件有哪些？
 
 **安全方面**
 --------------
@@ -278,6 +296,28 @@
 
 >13.怎样实现单点登录
 
+>14.immutable用法
+
+>15.网站错误收集 onError
+
+>15.fetch请求，超过5秒后，前端返回，已超时，写出代码。[参考](https://stackoverflow.com/questions/46946380/fetch-api-request-timeout/50096215#50096215)     
+    
+    function fetchWithTimeout(url, options, timeout = 5000) {
+        return Promise.race([
+            fetch(url, options),
+            new Promise((_, reject) => {
+                setTimeout(() => reject(new Error('timeout)), timeout)
+            })
+        ]);
+    }
+
+    fetch('http: //google.com', options, 5000)
+    .then((result) => {
+        // handle result
+    })
+    .catch((e) => {
+        // handle errors and timeout errors
+    })
 
 
 
