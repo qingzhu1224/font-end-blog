@@ -212,6 +212,37 @@
 **算法题目**
 -----------------
 >1.排序（冒泡、快排、归并）
+        
+        function isArray(arr){
+            if(Array.isArray) {
+            return Array.isArray(arr);
+            } else {
+                return Object.prototype.toString.call(this, arr);
+            }
+        }       
+
+        function mergeSort(arr){
+            if(!isArray(arr)) return 'please input a array';
+            if(arr.length < 2) return arr;
+            var  middle = parseInt(arr.length/2);
+            var left = arr.slice(0, middle);
+            var right = arr.slice(middle);
+            return merge(mergeSort(left), mergeSort(right));
+        }
+
+        function merge(left, right){
+            console.log('left=======>>>>>>>>>>', left)
+            console.log('right=======>>>>>>>>>>', right)
+            var result = [];
+            while(left.length && right.length) {
+                left[0] <= right[0] ? result.push(left.shift()) : result.push(right.shift()) 
+            }
+            console.log('result', result);
+            while (left.length) result.push(left.shift());
+            while (right.length) result.push(right.shift());
+            return result;
+        }
+
 
 >2.一个数组对象，依照某个字段排序，并取出排第一位的（第一位考虑多个）
 
