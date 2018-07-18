@@ -325,7 +325,7 @@
 
 >16.[浏览器缓存](https://mp.weixin.qq.com/s/Fei23IMbFKIzOzICmW641w) [腾讯课堂](http://imweb.io/topic/5795dcb6fb312541492eda8c)
 
-![]('http://imweb.io/topic/5795dcb6fb312541492eda8c')
+![](http://imweb.io/topic/5795dcb6fb312541492eda8c '状态码')
 
 
 
