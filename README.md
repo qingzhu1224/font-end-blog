@@ -249,6 +249,10 @@
 >2.[slot](https://www.w3cplus.com/vue/vue-slot.html);是指vue的内容分发，也称插槽。它显示与否以及怎么显示完全是由父组件来控制。具体显示位置由子组件自身决定。分为单个插槽、具名插槽（slot）以及作用域插槽(slot-scoped)。
 
 >3.计算属性：模板内的表达式非常便利，如果放入太多的逻辑会让模版过重而难以维护。计算属性和方法的区别是：计算属性是基于依赖进行缓存；侦听器：当需要在数据变化时执行异步或开销较大的操作时，这个方法有用。watch.
+
+>4.tansation的属性有哪些
+
+>5.mixmin混入
 **webpack**
 ==========
 
@@ -319,9 +323,9 @@
         // handle errors and timeout errors
     })
 
+>16.[浏览器缓存](https://mp.weixin.qq.com/s/Fei23IMbFKIzOzICmW641w) [腾讯课堂](http://imweb.io/topic/5795dcb6fb312541492eda8c)
 
-
-
+![]('http://imweb.io/topic/5795dcb6fb312541492eda8c')
 
 
 
