@@ -97,7 +97,7 @@
 
 >11.创建对象以及继承
 
->12.原型链
+>12.原型链(Object、Function以及null关系)
 
 >13.事件循环机制
 
@@ -142,7 +142,16 @@
     str.trim()
     正则表达式
 
->29.decodeURIComponent和decodeURI区别（encodeURI和encodeURIComponent）   `encodeURI`主要用于整个URI,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号.`encodeURIComponent`用于对URI中的某一段，会对它发现的任何非标准字符进行编码
+>29.decodeURIComponent和decodeURI区别（encodeURI和encodeURIComponent）    
+`encodeURI`主要用于整个URI,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号.`encodeURIComponent`用于对URI中的某一段，会对它发现的任何非标准字符进行编码
+
+>29.new Date()的一些api操作
+
+>30.toString()和String()区别
+
+>31.有哪些循环操作，它们的区别是什么
+
+>32.数组又哪些方法
 
 
 **javascript DOM**
@@ -337,6 +346,7 @@
 
 
     If-Modified-Since 如果客户端传过来的最后修改时间与服务器上的一致，则直接回送304
+
 
 
 
