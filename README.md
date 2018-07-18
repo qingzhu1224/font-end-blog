@@ -142,7 +142,7 @@
     str.trim()
     正则表达式
 
->29.decodeURIComponent和decodeURI区别
+>29.decodeURIComponent和decodeURI区别（encodeURI和encodeURIComponent）   `encodeURI`主要用于整个URI,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号.`encodeURIComponent`用于对URI中的某一段，会对它发现的任何非标准字符进行编码
 
 
 **javascript DOM**
