@@ -87,3 +87,11 @@ function quickSort(arr, _left, _right) {
 var nums=[6,10,1,9,4,8,2,7,3,5];
 
 
+var str = 'hello';
+String.prototype.repeateStr = function(num) {
+    var self = this;
+    for(var i = 0;i<nums;i++) {
+        self = self + self;
+    }
+}
+
