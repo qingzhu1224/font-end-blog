@@ -25,16 +25,13 @@
 
 >6.垂直居中（子元素固定高度和不固定高度）
 
->7.两栏、三栏和上下固定中间自适应
+>7.两栏、三栏和上下固定中间自适应
 
 >8.letter-spacing
 
 >9.文字超过范围省略（`overflow: hidden`; `white-space: nowrap`; `text-overflow: ellipsis`）
 
 >10.兼容性问题（从css和js两方面说）
-
-
-
 
 >11.透明的兼容写法
 
@@ -58,7 +55,7 @@
 
 >21.css选择器有哪些
 
->22.css sprite是什么？有什么优缺点？
+>22.css sprite是什么？有什么优缺点？
 
 >23.css hack原理是什么？以及常用hack?
 
@@ -86,7 +83,7 @@
 
 >4.paseInt() 强制转换
 
->5.setTimeout和for循环结合的题目
+>5.setTimeout和for循环结合的题目
 
 >6.setTimeout和promise
 
@@ -322,7 +319,7 @@
 ---------------
 >1.vue-router
 
->2.[slot](https://www.w3cplus.com/vue/vue-slot.html);是指vue的内容分发，也称插槽。它显示与否以及怎么显示完全是由父组件来控制。具体显示位置由子组件自身决定。分为单个插槽、具名插槽（slot）以及作用域插槽(slot-scoped)。
+>2.[slot](https://www.w3cplus.com/vue/vue-slot.html);是指vue的内容分发，也称插槽。它显示与否以及怎么显示完全是由父组件来控制。具体显示位置由子组件自身决定。分为单个插槽、具名插槽（slot）以及作用域插槽(slot-scoped)。
 
 >3.计算属性：模板内的表达式非常便利，如果放入太多的逻辑会让模版过重而难以维护。计算属性和方法的区别是：计算属性是基于依赖进行缓存；侦听器：当需要在数据变化时执行异步或开销较大的操作时，这个方法有用。watch.
 
@@ -341,7 +338,7 @@
 **安全方面**
 --------------
 >1.XSS，怎样预防，[参考资料]（https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet#RULE_.231_-_HTML_Escape_Before_Inserting_Untrusted_Data_into_HTML_Element_Content） 
-    XSS为跨站脚本（cross site script），为了不和css重复，故叫XSS.    
+    XSS为跨站脚本（cross site script），为了不和css重复，故叫XSS.    
     防御方式：1.使用转义，把&、>、< 等转义；2.使用innerText，不使用innerHTML 3.JSON.parse() 
 >2.CRFS
 
@@ -413,6 +410,37 @@
 
 
     If-Modified-Since 如果客户端传过来的最后修改时间与服务器上的一致，则直接回送304
+
+浪淘金面试题
+------------------------------------
+>1.setTimeout和websocket区别 [参考](https://blog.csdn.net/w05980598/article/details/79256985)       
+    `setInterval`和`seiTimeout`的缺陷：程序在每次请求时都会`新建一个HTTP请求`，然而并不是每次都能返回所需的新数据。当同时发起的请求达到一定数目时，会对`服务器造成较大负担`，`带宽浪费`。`长轮询`长轮询的基本思想是在每次客户端发出请求后，服务器检查上次返回的数据与此次请求时的数据之间是否有更新，如果有更新则返回新数据并结束此次连接，否则服务器 hold 住此次连接，直到有新数据时再返回相应。这个主要缺点是每次连接的保持是以消耗服务器资源为代价的。`服务器发送事件（Server-send Event）`可以实现服务器到客户端的单向数据通信。
+
+    
+        var ws = new WebSocket("wss://echo.websocket.org");
+        ws.onopen = function(evt) { 
+            console.log("Connection open ..."); 
+            ws.send("Hello WebSockets!");
+        };
+        ws.onmessage = function(evt) {
+            console.log( "Received Message: " + evt.data);
+            ws.close();
+        };
+        ws.onclose = function(evt) {
+            console.log("Connection closed.");
+        };      
+
+
+>2.vue嵌套路由原理以及嵌套路由、路由参数怎么取到
+
+>3.用js实现1-10000中有多少个0？
+
+>4.var str = 'hello' 实现str.repeateStr(3) 得到'hellohellohello'
+
+>5.垂直居中（无宽度和高度）
+
+>6.vue-router实现原理  
+
 
 
 
