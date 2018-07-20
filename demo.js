@@ -31,7 +31,7 @@ function isArray(arr){
 }
 
 function mergeSort(arr){
-    if(!isArray(arr)) return 'please input a array';
+    // if(!isArray(arr)) return 'please input a array';
     if(arr.length < 2) return arr;
     var  middle = parseInt(arr.length/2);
     var left = arr.slice(0, middle);
@@ -40,13 +40,12 @@ function mergeSort(arr){
 }
 
 function merge(left, right){
-    console.log('left=======>>>>>>>>>>', left)
-    console.log('right=======>>>>>>>>>>', right)
     var result = [];
     while(left.length && right.length) {
         left[0] <= right[0] ? result.push(left.shift()) : result.push(right.shift()) 
+        console.log('left', left);
+        console.log('right', right)
     }
-    console.log('result', result);
     while (left.length) result.push(left.shift());
     while (right.length) result.push(right.shift());
     return result;
@@ -62,7 +61,7 @@ function sort(left, right) {
 
 function quickSort(arr, _left, _right) {
     // if(!isArray(arr)) return 'please input a array';
-    var left = _left;
+    var left = _left;        m
     var right = _right;
     var temp = 0;
     if(left <= right) {
@@ -83,6 +82,7 @@ function quickSort(arr, _left, _right) {
     }
     return arr;
 }
+
 
 var nums=[6,10,1,9,4,8,2,7,3,5]
 

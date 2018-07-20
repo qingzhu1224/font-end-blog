@@ -147,11 +147,13 @@
 
 >29.new Date()的一些api操作
 
->30.toString()和String()区别
+>30.toString()和toLocalString()区别  两者主要区别用在Date对象上，toLocalString会判断当前语言环境，转换为当前环境的字符串
 
 >31.有哪些循环操作，它们的区别是什么
 
 >32.数组又哪些方法
+
+>33.var a = 'name';a.age = 28;console.log(a.age) 打印出来是undefined
 
 
 **javascript DOM**
@@ -194,6 +196,11 @@
 **http方面**
 --------------
 >1.状态码
+    1. 1** 信息  服务器收到请求，需要请求者继续执行操作   
+    2. 2** 成功    操作被成功接受并处理
+    3. 3** 重定向      需要进一步的操作以完成请求
+    4. 4** 客户端错误     请求包含语法错误或无法完成请求
+    5. 5** 服务端错误   服务器在处理请求的过程中发生了错误
 
 >2.get和post区别
 
@@ -207,7 +214,12 @@
 
 **持久化方面**
 ------------
->1.cookie session localstorage sessionstorage
+>1.cookie session localstorage sessionstorage    
+    1.从大小方面
+    2.每次请求是否携带
+    3.从安全方面
+    4.从有效期方面
+
 
 **算法题目**
 -----------------
@@ -243,28 +255,27 @@
             return result;
         }
         function quickSort(arr, _left, _right) {
-        // if(!isArray(arr)) return 'please input a array';
-        var left = _left;
-        var right = _right;
-        var temp = 0;
-        if(left <= right) {
-            temp = arr[left];  //待排序的第一个元素作为基准元素
-                while(left != right){   //从左右两边交替扫描，直到left = right
-                    while(right > left && arr[right] >= temp)  
-                        right --;        //从右往左扫描，找到第一个比基准元素小的元素
-                    arr[left] = arr[right];  //找到这种元素arr[right]后与arr[left]交换
+            // if(!isArray(arr)) return 'please input a array';
+            var left = _left;
+            var right = _right;
+            var temp = 0;
+            if(left <= right) {
+                temp = arr[left];  //待排序的第一个元素作为基准元素
+                    while(left != right){   //从左右两边交替扫描，直到left = right
+                        while(right > left && arr[right] >= temp)  
+                            right --;        //从右往左扫描，找到第一个比基准元素小的元素
+                        arr[left] = arr[right];  //找到这种元素arr[right]后与arr[left]交换
 
-                    while(left < right && arr[left] <= temp)
-                        left ++;         //从左往右扫描，找到第一个比基准元素大的元素
-                    arr[right] = arr[left];  //找到这种元素arr[left]后，与arr[right]交换
-                }
-            arr[right] = temp;    //基准元素归位
-            quickSort(arr,_left,left-1);  //对基准元素左边的元素进行递归排序
-            quickSort(arr, right+1,_right);  //对基准元素右边的进行递归排序
+                        while(left < right && arr[left] <= temp)
+                            left ++;         //从左往右扫描，找到第一个比基准元素大的元素
+                        arr[right] = arr[left];  //找到这种元素arr[left]后，与arr[right]交换
+                    }
+                arr[right] = temp;    //基准元素归位
+                quickSort(arr,_left,left-1);  //对基准元素左边的元素进行递归排序
+                quickSort(arr, right+1,_right);  //对基准元素右边的进行递归排序
+            }
+            return arr;
         }
-        return arr;
-    }
-
 
 >2.一个数组对象，依照某个字段排序，并取出排第一位的（第一位考虑多个）
 
