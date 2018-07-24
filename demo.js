@@ -95,3 +95,26 @@ String.prototype.repeateStr = function(num) {
     }
 }
 
+function productArray(nums) {
+    var resultArr = [];
+    for(var i=0; i<nums; i++) {
+        var randomNum = Math.ceil(Math.random(0,1)*50+1);
+        if(resultArr.indexOf(randomNum) === -1) {
+            resultArr.push(randomNum); 
+        }
+    }
+    return resultArr
+}
+
+
+
+function zeroNum(Number) {
+    var count = 0;
+    for(var i = 0; i<Number;i++){
+        var _str = String(i);
+        if(_str.indexOf('0') > -1){
+            count ++;
+        }
+    }
+    return count;
+}
