@@ -515,7 +515,7 @@
 
 >12.浏览器缓存问题（都是缓存什么东西，怎么缓存）
 
->13.跨域问题（JSONP实现).`JSON`缺点只能是get请求
+>13.跨域问题（JSONP实现).`JSON`缺点只能是get请求.`JSONP`, `document.domain`, `window.name`, 代理问题
     
     function JSONP(url) {
             var dosomething = function(data) {
@@ -530,4 +530,58 @@
 
 >14.介绍Promise，同步和异步调用接口
 
->15.
+
+
+理房通
+===================================
+>1。一个div有宽高，在浏览器中垂直居中
+
+>2.css画一个三角形
+
+>3.读程序题目    
+
+    var a = 2;
+    function test() {
+        var a = 1;
+        console.log(this.a);
+    }
+    var o = {test: test}
+    o.test()  //undefined
+
+>4.try catch是不是块级作用域
+
+>5.写一个判断数据类型的函数
+
+>6.[{a:4,b:'h'}, {a:1,b:'h'}, {a:3,b:'h'}, {a:2,b:'h'}] 依照a从小到大排序，除了用sort还有什么其他方法
+
+>7.<div><a href="xxxxxx"></a><a href="xxxxxx"></a><a href="xxxxxx"></a><a href="xxxxxx"></a><a href="xxxxxx"></a>...</div>使用尽量少的代码，以此弹出各个a的ref，并阻止默认事件。
+
+>8.前后端分离问题
+
+>9.转换数据类型 
+
+    var a = [{
+        id: 1, key: 1, name: 'yqz'
+    }, {
+        id: 2, key: 2, name: 'yqz2'
+    }, {
+        id: 3, key: 3, name: 'yqz3'
+    }, ...];
+
+    转换成
+
+    var b = {
+        id: 1, key: 1, name: 'yqz',
+        child: {
+            id: 2, key: 2, name: 'yqz2', parent: 1,
+            child: {
+                id: 3, key: 3, name: 'yqz3',parent: 2,
+                child: ...
+            }
+        }
+    }
+
+>10.react中key的用处，为什么要设置它
+
+>11.react的生命周期，以及在什么地方可以使用真实dom,以及调取接口？
+

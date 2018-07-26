@@ -81,5 +81,40 @@ var sortNums = quickSort(nums, 0, 10);
 console.log(sortNums, '排序之后的数据')
 
 
+var a = 2;
+
+function test() {
+    var a = 1;
+    console.log('this', this)
+    console.log(this.a);
+}
+
+var o = {test: test}
+
+o.test();
+
+
+var a = [{
+    id: 1, key: 1, name: 'yqz'
+}, {
+    id: 2, key: 2, name: 'yqz2'
+}, {
+    id: 3, key: 3, name: 'yqz3'
+}, ...];
+
+转换成
+
+var b = {
+    id: 1, key: 1, name: 'yqz',
+    child: {
+        id: 2, key: 2, name: 'yqz2', parent: 1,
+        child: {
+            id: 3, key: 3, name: 'yqz3',parent: 2,
+            child: ...
+        }
+    }
+}
+
+
 
 
