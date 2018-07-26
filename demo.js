@@ -118,3 +118,28 @@ function zeroNum(Number) {
     }
     return count;
 }
+// str = window.location.search.slice(1)
+function getQueryParams(str) {
+    if (!str) return {};
+    return str.split('&').reduce((ret, param) => {
+        const match = param.match(/^(.+)=(.+)$/);
+        if (!match) return ret;
+        return {
+            ...ret,
+            [decodeURIComponent(match[1])]: decodeURIComponent(match[2]),
+        };
+    }, {});
+}
+
+
+function getQueryParams(str) {
+    if(!str) return {};
+    return str.split('&').reduce((ret, param) => {
+        const match = param.match(/^(.+)=(.+)$/);
+        if(!match) return ret;
+        return {
+            ...ret,
+            [decodeURIComponent(match[1])]: decodeURIComponent(match[2]),
+        }
+    }, {})
+}

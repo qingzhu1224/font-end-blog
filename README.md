@@ -277,14 +277,13 @@
             return arr;
         }
 
->2.一个数组对象，依照某个字段排序，并取出排第一位的（第一位考虑多个）
+>2.一个数组对象，依照某个字段排序，并取出排第一位的（第一位考虑多个）（新浪面试题）
 
 >3.数组去重
 
 >4.     
     //解析url(正则方法）
-    function getQueryParams(
-    str = window.location.search.slice(1),) {
+    function getQueryParams(str = window.location.search.slice(1)) {
     if (!str) return {};
     return str.split('&').reduce((ret, param) => {
         const match = param.match(/^(.+)=(.+)$/);
@@ -460,6 +459,9 @@
 
 >13.函数式编程
 
+>14.图片比较大，上传时，怎么压缩
+
+
 
 马蜂窝
 ================================
@@ -484,3 +486,48 @@
 >10.性能优化问题
 
 >11.基本数据类型：面试官说包括null
+
+
+百度
+=====================
+
+>1.setState  按钮点击1，2，
+
+>2.setState合并问题
+
+>3.数组[1,2,3,4,5,6]，每一秒弹出1，2，3
+
+>4.max_name => maxName
+
+>5.双向数据绑定写出来
+
+>6.fetch
+
+>7.react生命周期
+
+>8.正则写出邮箱
+
+>9.创建对象继承
+
+>10.深度克隆问题
+
+>11.自己写一个路由
+
+>12.浏览器缓存问题（都是缓存什么东西，怎么缓存）
+
+>13.跨域问题（JSONP实现).`JSON`缺点只能是get请求
+    
+    function JSONP(url) {
+            var dosomething = function(data) {
+                console.log(data);
+            };
+            var url = `${url}?callback=dosomething`;
+            // 创建<script>标签，设置其src属性
+            var script = document.createElement('script');
+            script.setAttribute('src', url);
+            document.getElementsByTagName('body')[0].appendChild(script);
+    }
+
+>14.介绍Promise，同步和异步调用接口
+
+>15.
