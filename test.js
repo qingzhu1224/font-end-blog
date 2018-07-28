@@ -117,4 +117,13 @@ var b = {
 
 
 
-
+const yqz_computed_zeros = (nums) => {
+    let count = 0;
+    for(let i = 1; i <= nums; i ++) {
+        const sNums = String(i);
+        for(let j = 0, len = sNums.length; j < len; j++) {
+            if(sNums[j] === '0') count ++ ;
+        }
+    }
+    return count;
+}

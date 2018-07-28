@@ -61,7 +61,7 @@ function sort(left, right) {
 
 function quickSort(arr, _left, _right) {
     // if(!isArray(arr)) return 'please input a array';
-    var left = _left;        m
+    var left = _left;
     var right = _right;
     var temp = 0;
     if(left <= right) {
@@ -142,4 +142,90 @@ function getQueryParams(str) {
             [decodeURIComponent(match[1])]: decodeURIComponent(match[2]),
         }
     }, {})
+}
+
+var items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: -12 },
+    { name: 'Zeros', value: 37 }
+];
+
+function sortArr(arr) {
+    return arr.sort((item1, item2) => {
+        return item1.value - item2.value
+    });
+}
+
+// 冒泡排序
+function sortArr_noApi(arr) {
+    for(var i = 0, len = arr.length; i < len; i++) {
+        for(var j = i + 1; j < len; j++) {
+            if(arr[j].value < arr[i].value) {
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+
+var d = [78,3,100,89,5,23];
+// 快排
+function sort_quick(arr, _left, _right) {
+    var left = _left;
+    var right = _right;
+    var temp = 0;
+    if(left<=right) {
+        temp = arr[left];
+        while(left!=right) {
+            while(left < right && arr[right] >= temp) right --;
+            arr[left] = arr[right];
+            while(left < right && arr[left] <= temp) left ++;
+            arr[right] = arr[left];
+        }
+        arr[right] = temp;
+        quickSort(arr, _left, left -1);
+        quickSort(arr, right+1, _right);
+    }
+}
+
+var items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: 21 },
+    { name: 'Zeros', value: 37 }
+];
+
+// 快排
+function sort_quick(arr, _left, _right) {
+    var left = _left;
+    var right = _right;
+    var temp = 0;
+    if(left<=right) {
+        temp = arr[left];
+        while(left!=right) {
+            while(left < right && arr[right].value >= temp.value) right --;
+            arr[left] = arr[right];
+            while(left < right && arr[left].value <= temp.value) left ++;
+            arr[right] = arr[left];
+        }
+        arr[right] = temp;
+        sort_quick(arr, _left, left -1);
+        sort_quick(arr, right+1, _right);
+    }
+    const _arr = pickMax(arr);
+    return _arr;
+}
+
+function pickMax(arr) {
+    var temp = arr[0];
+    for(var i = 1, len = arr.length; i < len; i ++) {
+        if(arr[i].value > temp.value) break;
+    }
+    return arr.slice(0, i)
 }
