@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>双向数据绑定</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+</style>
+<script>
+    window.onload=function() {
+        var data = {};
+        Object.defineProperty(data, 'text', {
+            // configurable: true,
+            // enumerable: true,
+            // writable: true,
+            // value: 'input',
+            set: function(newValue) {
+                var TextDom = document.getElementById('text');
+                TextDom.innerHTML = newValue;
+            },
+            get: function() {
+                console.log('这是get')
+            },
+        });
+        var ContainerDom = document.getElementById('container');
+        ContainerDom.addEventListener('keyup', function(e){
+            var target = e.target;
+            if(target.nodeName.toUpperCase() === 'INPUT') {
+                data.text = e.target.value;
+                console.log(e.target.value)
+            }
+        });
+
+
+        // 初始化
+        var TextDom = document.getElementById('text');
+        TextDom.innerHTML = data.text;
+
+        var InputDom = document.getElementById('inpit');
+        InputDom.innerHTML = data.text;
+
+    }
+</script>
+</head>
+<body>
+   <div id="container">
+       请输入：<input type="text" id="input">
+       <p id="text"></p>
+   </div>
+</body>
+</html>

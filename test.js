@@ -127,3 +127,26 @@ const yqz_computed_zeros = (nums) => {
     }
     return count;
 }
+
+
+const DeepClone = (obj) => {
+    if(JSON.stringify) {
+        return JSON.parse(JSON.stringify(obj))
+    }
+
+}
+
+const proxyJSON = (obj) => {
+    const _obj = {};
+    for(let key in obj) {
+        //基本数据类型
+        if(typeof obj[key] !== object) {
+            
+        }
+    }
+}
+
+const isArray = (obj) => {
+    if(Array.isArray) return Array.isArray(obj);
+    return Object.prototype.toString.call(obj);
+}
