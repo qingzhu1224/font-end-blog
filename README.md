@@ -120,8 +120,8 @@
 
 >21.实现深度clone
 
->22. 
-    //创建一个对像的方式以及区别(京东面试)
+>22.创建一个对像的方式以及区别(京东面试)
+
     var a = {}
     var a = new Object()
     function Person(){}
@@ -214,7 +214,8 @@
 
 **持久化方面**
 ------------
->1.cookie session localstorage sessionstorage    
+>1.cookie session localstorage sessionstorage   
+
     1.从大小方面
     2.每次请求是否携带
     3.从安全方面
@@ -604,3 +605,11 @@
 =================
 
 >1.ES6新特性  ----- 箭头函数／promise   强缓存和协商缓存  排序  正则   原型
+
+
+[今日头条面试](https://cloud.tencent.com/developer/article/1140218)
+===============================================================
+
+
+[小程序面试题](http://www.bslxx.com/m/view.php?aid=1027)
+==========================
