@@ -338,7 +338,7 @@
 
 **安全方面**
 --------------
->1.XSS，怎样预防，[参考资料]（https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet#RULE_.231_-_HTML_Escape_Before_Inserting_Untrusted_Data_into_HTML_Element_Content） 
+>1.[XSS，怎样预防]（https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)） 
     XSS为跨站脚本（cross site script），为了不和css重复，故叫XSS.    
     防御方式：1.使用转义，把&、>、< 等转义；2.使用innerText，不使用innerHTML 3.JSON.parse() 
 >2.CRFS
