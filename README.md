@@ -614,3 +614,11 @@
 
 [小程序面试题](http://www.bslxx.com/m/view.php?aid=1027)
 ==========================
+
+##### 图片等比缩放 ####
+        img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
