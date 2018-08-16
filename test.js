@@ -150,3 +150,46 @@ const isArray = (obj) => {
     if(Array.isArray) return Array.isArray(obj);
     return Object.prototype.toString.call(obj);
 }
+
+var obj = {
+    a: 123,
+    b: function() {
+        console.log(this.a);
+    }
+}
+
+var a = '456';
+var obj = {
+    a: 123,
+    b: function() {
+        return function() {
+            console.log(this.a);
+        }
+       
+    }
+}
+
+
+console.log('hello word 1')
+for(var i = 0; i< 3;i++) {
+    setTimeout(() => {
+        console.log('hello word 2');
+    }, i*1000)
+}
+
+new Promise((resolve, reject) => {
+    console.log('hello word 3')
+    resolve('hello')
+}).then((str) => {
+    console.log(str)
+    console.log('hello word 4')
+})
+
+console.log('hello word 5')
+
+
+new Promise((resolve, reject) => {
+    resolve('hello')
+}).then((str) => {
+    console.log(str)
+})

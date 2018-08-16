@@ -85,7 +85,25 @@
 
 >5.setTimeout和for循环结合的题目
 
->6.setTimeout和promise
+>6.setTimeout和promise，循环事件机制，微任务和宏任务
+
+        // 打印顺序：1，3，5，4，2
+        console.log('hello word 1')
+        for(var i = 0; i< 3;i++) {
+            setTimeout(() => {
+                console.log('hello word 2');
+            }, i*1000)
+        }
+        new Promise((resolve, reject) => {
+            console.log('hello word 3')
+            resolve('hello')
+        }).then((str) => {
+            console.log(str)
+            console.log('hello word 4')
+        })
+        console.log('hello word 5')
+
+        
 
 >7.数组有哪些方法
 
@@ -563,7 +581,7 @@
     var o = {test: test}
     o.test()  //undefined
 
->4.try catch是不是块级作用域
+>4.try catch是不是块级作用域, `catch`是一个块级作用域
 
 >5.写一个判断数据类型的函数
 
@@ -622,3 +640,27 @@
             max-width: 100%;
             max-height: 100%;
         }
+
+
+react
+=================
+
+1.redux中的状态是怎么绑定道组件中去的？
+
+
+
+
+需要复习的点
+============================
+
+>1.vue的双向数据、watch和vue的实现
+
+>2.手写继承、包括ES6
+
+>3.为什么使用虚拟DOM，对虚拟DOM的理解
+
+>4.promise和肩头函数
+
+>5.webpack原理
+
+>6.做一些算法题
