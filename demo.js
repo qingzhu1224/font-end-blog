@@ -238,3 +238,42 @@ function add(x) {
 }
 
 add(5);
+
+
+
+function whichType(a) {
+    var typeOf_a = typeof a;
+    switch(typeOf_a) {
+        case 'string':
+            return '字符串';
+        case 'boolean':
+            return '布尔';
+        case 'function':
+            return '这是个函数哦';
+        case 'undefined':
+            return 'undefined';
+        case 'symbol':
+            return '符号';
+        case 'number':
+            return _isNaN ? 'NaN哦': '数字了';
+        case 'object':
+            return _isObject(a)? 'object' : (_isArray(a) ? '数组哦': '我也不知道我是什么');
+        default:
+            return 'do not which type is'
+        
+    }
+}
+
+function _isNaN(a) {
+    if(isNaN) return isNaN;
+    return !(a === a);
+}
+
+function _isArray(a) {
+    if(Array.isArray) return Array.isArray(a);
+    return Object.prototype.toString.call(a) === '[object Array]';
+}
+
+function _isObject(a) {
+    return (a !== null) && (a.constructor === Object);
+}

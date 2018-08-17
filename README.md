@@ -580,9 +580,46 @@
     var o = {test: test}
     o.test()  //undefined
 
->4.try catch是不是块级作用域, `catch`是一个块级作用域
+>4.try catch是不是块级作用域, `catch`是一个`伪块级作用域`
 
 >5.写一个判断数据类型的函数
+        function whichType(a) {
+            var typeOf_a = typeof a;
+            switch(typeOf_a) {
+                case 'string':
+                    return '字符串';
+                case 'boolean':
+                    return '布尔';
+                case 'function':
+                    return '这是个函数哦';
+                case 'undefined':
+                    return 'undefined';
+                case 'symbol':
+                    return '符号';
+                case 'number':
+                    return _isNaN ? 'NaN哦': '数字了';
+                case 'object':
+                    return _isObject(a)? 'object' : (_isArray(a) ? '数组哦': '我也不知道我是什么');
+                default:
+                    return 'do not which type is'
+                
+            }
+        }
+
+        function _isNaN(a) {
+            if(isNaN) return isNaN;
+            return !(a === a);
+        }
+
+        function _isArray(a) {
+            if(Array.isArray) return Array.isArray(a);
+            return Object.prototype.toString.call(a) === '[object Array]';
+        }
+
+        function _isObject(a) {
+            return (a !== null) && (a.constructor === Object);
+        }
+
 
 >6.[{a:4,b:'h'}, {a:1,b:'h'}, {a:3,b:'h'}, {a:2,b:'h'}] 依照a从小到大排序，除了用sort还有什么其他方法
 
@@ -658,7 +695,7 @@ react
 
 >3.为什么使用虚拟DOM，对虚拟DOM的理解
 
->4.promise和肩头函数
+>4.promise和箭头函数
 
 >5.webpack原理
 
@@ -765,4 +802,3 @@ react
         2. typeof undefined == typeof null   
         3. typeof NULL 
 
->7.
