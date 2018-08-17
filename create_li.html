@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>创建li，并添加点击事件</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    #container li{
+        width: 100px;
+        line-height: 24px;
+        border: 1px solid red;
+        margin: 10px;
+    }
+</style>
+<script>
+    var myFun = function(e) {
+        console.log(this, e);// window
+    }
+    window.onload = function() {
+        var ulDom = document.getElementById('container');
+        var fragment = document.createDocumentFragment();
+        for(var i = 0; i < 10; i++) {
+            var li = document.createElement('li');
+            fragment.appendChild(li);
+            li.innerHTML = i;
+        }
+        ulDom.appendChild(fragment);
+
+        ulDom.addEventListener('click', function(e){
+            console.log(e)
+            if(e.target.nodeName.toUpperCase() === 'LI'){
+                console.log(e.target.innerHTML);
+            }
+        }, false);
+
+        var tagDom = document.getElementById('tag2');
+        tagDom.click = myFun;
+        var myFun = function() {
+            console.log(this);// window
+        }
+    }
+</script>
+</head>
+<body>
+    <ul id="container"></ul>
+    <a id="tag" onclick="myFun()">点击我！</a>
+    <a id="tag2" onclick="myFun()">点击我！2</a>
+</body>
+</html>

@@ -515,8 +515,7 @@
 
 >10.性能优化问题
 
->11.基本数据类型：面试官说包括null
-
+>11.基本数据类型和引用数据类型（基本数据类型包括：`number`、`string`、`undefined`、`boolean`、`null`、`object`、`symbol`(ES6)）共`7`种。基础数据类型是栈存储，引用数据类型是`堆存储` [参考](https://www.imooc.com/article/1181)
 
 百度
 =====================
@@ -666,3 +665,104 @@ react
 >6.做一些算法题
 
 >7.深度克隆算法
+
+>8.浏览器缓存
+
+>9.服务器端渲染
+
+>10.写一个路由，可参考老版本的路由写法
+
+>11.性能优化
+
+>12.浏览器渲染原理
+
+>13.react组件编写时，为什么使用super
+
+
+### 面试题[掘金](https://juejin.im/post/5b6e60a05188251afe7bbc0e) ###
+
+>1.执行结果
+
+        var length = 10;
+        function fn() {
+            console.log(this.length);
+        }
+
+        var obj = {
+            length: 5,
+            method: function(fn) {
+                fn();
+                arguments[0]();
+            }
+        };
+        obj.method(fn, 1);
+
+>2.作用域 [`try`和`catch`](https://www.web-tinker.com/article/20331.html)
+
+        (function () {
+            try {
+                throw new Error();
+            } catch (x) {
+                // 虽然像一个函数接受参数，貌似会形成一个作用域，但是并不会
+                var x = 1, y = 2;
+                console.log(x);
+            }
+            console.log(x);
+            console.log(y);
+        })();
+
+        (function () {
+            var x,y;  // 外部变量提升
+            try {
+                throw new Error();
+            } catch (x/* 内部的x */) {
+                x = 1; //内部的x，和上面声明的x不是一回事！！
+                y = 2; //内部没有声明，作用域链向上找，外面的y
+                console.log(x); //当然是1
+            }
+            console.log(x);  //只声明，未赋值，undefined
+            console.log(y);  //就是2了
+        })();
+
+
+>3.[作用域问题](https://github.com/creeperyang/blog/issues/16)
+
+        function testOrder(arg) {
+            console.log(arg); // arg是形参，不会被重新定义
+            console.log(a); // 因为函数声明比变量声明优先级高，所以这里a是函数
+            var arg = 'hello'; // var arg;变量声明被忽略， arg = 'hello'被执行
+            var a = 10; // var a;被忽视; a = 10被执行，a变成number
+            function a() {
+                console.log('fun');
+            } // 被提升到作用域顶部
+            console.log(a); // 输出10
+            console.log(arg); // 输出hello
+        }; 
+        testOrder('hi');
+
+>4.[函数参数和函数内的变量同名问题](https://www.cnblogs.com/fool/archive/2010/10/19/1855261.html).`唯一强调的一点是在内部用var定义与形式参数同名的变量是无意义的，因为在程序'预解析'后，会将它们看作为同一个变量。`
+
+        function say(msg,other,garbage){
+            console.log(arguments[1]); // world
+            var other = 'nice to meet you!';
+            var msg;
+            console.log(arguments.length);// 2
+            console.log(msg);// hello
+            console.log(other);//'nice to meet you!';
+            console.log(arguments[1]);// 'nice to meet you!';
+            console.log(garbage);// undefined
+        }
+        say('hello','world');
+
+>5.`运算符`(在js中，这种运算符是从左到右的。)
+
+        console.log(1 < 2 < 3);
+        console.log(3 > 2 > 1);
+
+>6.typeof运算符
+
+        1. typeof  typeof 1
+        2. typeof undefined == typeof null   
+        3. typeof NULL 
+
+>7.

@@ -193,3 +193,16 @@ new Promise((resolve, reject) => {
 }).then((str) => {
     console.log(str)
 })
+
+
+function say(msg,other,garbage){
+    console.log(arguments[1]); // world
+    var other = 'nice to meet you!';
+    var msg;
+    console.log(arguments.length);// 2
+    console.log(msg);// hello
+    console.log(other);//'nice to meet you!';
+    console.log(arguments[1]);// 'nice to meet you!';
+    console.log(garbage);// undefined
+}
+say('hello','world');

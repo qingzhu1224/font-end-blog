@@ -229,3 +229,12 @@ function pickMax(arr) {
     }
     return arr.slice(0, i)
 }
+
+
+function add(x) {
+    console.log(x, '1');
+    var x = 4;
+    console.log(x, '2')
+}
+
+add(5);
