@@ -136,6 +136,8 @@
 
 >20.typeof和instanceof区别
 
+   - instanceof 运算符用来测试`一个对象`在`其原型链中`是否存在`一个构造函数的 prototype 属性`。object instanceof constructor
+
 >21.实现深度clone
 
 >22.创建一个对像的方式以及区别(京东面试)
@@ -148,7 +150,7 @@
 
 >24.JS中有哪些内置函数
 
->25.===和==区别，以及何时使用它们
+>25.===和==区别，以及何时使用它们。`==`检查的是`允许类型转换情况下的值的相等性`，而`===`检查不允许类型转换情况下的值的相等性。
 
 >26.具体解释下JSONP
 
@@ -538,7 +540,7 @@
 
 >9.创建对象继承
 
->10.深度克隆问题 JSON.parse()和JSON.stringify()只是用于可enumber的
+>10.深度克隆问题 JSON.parse()和JSON.stringify()只是用于可enumberable的，[参考]()
 
 >11.自己写一个路由
 
@@ -802,3 +804,17 @@ react
         2. typeof undefined == typeof null   
         3. typeof NULL 
 
+
+>7.ES6的模块化、CommonJS、CMD和AMD的区别[参考1](https://juejin.im/post/5ab28582518825611a40603e)[参考2](https://juejin.im/post/5ab3194c518825555e5dbfa3)
+
+- CommonJS用于服务器端、CMD和AMD用于浏览器段，ES6模块用于浏览器端和服务器端
+
+- CommonJS是同步加载，CMD和AMD是异步加载，使用的时候加载，ES6是静态加载的设计思想，使得在编译时就可以确定模块的依赖关系，以及输入、输出的变量。
+
+- 浏览器同步加载script，遇到script标签就会停止渲染，执行完脚本才会继续渲染。如果遇到特别大的脚本，就会长时间白屏，用户体验很差。
+
+- 浏览器同步加载script标签，使用async和defer标签就可以异步加载。defer等到页面渲染完成才会执行。async只要脚本加载完成，立即执行
+
+- ES6和CommonJS区别，CommonJS模块输出是值的拷贝，ES6模块输出是值的引用（引用时可能修改到模块的值），CommonJS是运行时加载，ES6模块是编译时加载
+
+- AMD+require.js CMD+sea.js。AMD在使用前就准备好，CMD是用到了再去准备模块

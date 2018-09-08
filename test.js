@@ -206,3 +206,9 @@ function say(msg,other,garbage){
     console.log(garbage);// undefined
 }
 say('hello','world');
+
+
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+
+function sum()
