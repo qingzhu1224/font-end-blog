@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	  <a id="btn1" onclick="fun1.apply(this);" href="javascript:fun2();">btn</a>
+	</body>
+	
+	<script type="text/javascript">
+		function fun1(){
+            console.log(this, 'fun1');
+			console.log("111");
+		}
+		function fun2(){
+			console.log("222");
+		}
+		
+		var btn = document.getElementById("btn1");
+        
+        // btn.onclick = function () {
+        //     console.log(this, 'onclick');
+        // }
+		btn.addEventListener("click",function(){
+            console.log(this, 'addEventListener');
+			console.log("333");
+		});
+	</script>
+</html>
