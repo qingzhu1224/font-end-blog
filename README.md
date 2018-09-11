@@ -119,7 +119,11 @@
 
 >13.事件循环机制
 
->14.去抖和节流实现
+>14.去抖和节流实现[参考](https://www.cnblogs.com/fsjohnhuang/p/4147810.html)
+
+- `防抖（debounce）`的作用是，多次触发某个函数时，且每次触发的时间间隔小于设定的时间，则只调用一次，包括`立即执行`和`延迟执行`，`立即执行`的例子比如点赞，`延迟执行`的例子有输入框输入后，希望最后提交一次。
+
+- `节流(throttle)`是指会每隔一定时间（参数wait）调用函数。
 
 >15.判断一个数组方法
 
@@ -132,7 +136,11 @@
 
 >18.构造函数中this作用
 
->19.bind、call以及apply区别
+>19.bind、call以及apply区别，模拟实现[参考](https://github.com/mqyqingfeng/Blog/issues/12)
+
+- `bind`、`call`和`apply`都是为了解决this的指向问题。区别是bind不执行这个函数，call和apply执行这个函数
+
+- `bind`返回来的函数可以作为构造函数使用，此时跟绑定的对象没有关系了。
 
 >20.typeof和instanceof区别
 
@@ -159,8 +167,9 @@
 >28.      
 
     //去除字符串前后空格 
-    str.trim()
-    正则表达式
+- str.trim()
+    
+- 正则表达式 `const pattern = /^\s+|\s+$/gi`;
 
 >29.decodeURIComponent和decodeURI区别（encodeURI和encodeURIComponent）    
 `encodeURI`主要用于整个URI,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号.`encodeURIComponent`用于对URI中的某一段，会对它发现的任何非标准字符进行编码
@@ -818,3 +827,26 @@ react
 - ES6和CommonJS区别，CommonJS模块输出是值的拷贝，ES6模块输出是值的引用（引用时可能修改到模块的值），CommonJS是运行时加载，ES6模块是编译时加载
 
 - AMD+require.js CMD+sea.js。AMD在使用前就准备好，CMD是用到了再去准备模块
+
+
+>8.正则表达式[参考](https://c.runoob.com/front-end/854)
+
+- `\w`表示`[a-zA-Z0-9]`
+
+- `\d`表示`[0-9]`
+
+- `\s`表示匹配任意的空白符
+
+- `. `匹配除换行符以外的任意字符
+
+- `* `表示 0次或多次
+
+- `？`表示0次或1次
+
+- `+`表示1次或多次
+
+- 邮箱正则: ^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+
+- var pattern = /\d{3,5}/;  `pattern.test(str)`  `str.match(pattern)`  `str.replace(pattern)`
+            
+
