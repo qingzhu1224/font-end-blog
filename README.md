@@ -117,6 +117,13 @@
 
 >13.事件循环机制
 
+- 微任务（jobs）和宏任务(task)
+
+- 微任务包括 `process.nextTick` ，`promise` ，`Object.observe` ，`MutationObserver`
+
+- 宏任务包括  `script` ， `setTimeout` ，`setInterval` ，`setImmediate` ，`I/O` ，`UI rendering`
+
+
 >14.去抖和节流实现[参考](https://www.cnblogs.com/fsjohnhuang/p/4147810.html)
 
 - `防抖（debounce）`的作用是，多次触发某个函数时，且每次触发的时间间隔小于设定的时间，则只调用一次，包括`立即执行`和`延迟执行`，`立即执行`的例子比如点赞，`延迟执行`的例子有输入框输入后，希望最后提交一次。
@@ -200,7 +207,17 @@
 
 >7.冒泡和事件捕获
 
->8.事件代理
+- `事件捕获`, 通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。
+
+- `事件冒泡`, 与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。
+
+- 从HTML -> BODY-> 元素
+
+- 先捕获，后冒泡
+
+>8.事件代理[事件委托](https://github.com/yonyouyc/blog/issues/25)
+
+- `事件委托`就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。
 
 >9.location
 
@@ -846,3 +863,16 @@ react
             
 -  大于0的六位整数，且两位小数 `/^[1-9]\d{5}(\.\d{1,2})?$/g`
 
+>9.webpack学习文档[参考](https://survivejs.com/webpack/appendices/glossary/)
+
+>10.事件
+
+- e.target 指向触发事件监听的对象。
+
+- e.currentTarget 指向添加监听事件的对象。
+
+- this与e.currentTarget相同
+
+- 事件是先捕捉后冒泡
+
+- 
