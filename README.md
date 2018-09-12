@@ -103,8 +103,6 @@
         })
         console.log('hello word 5')
 
-        
-
 >7.数组有哪些方法
 
 >8.ES6的特性
@@ -154,6 +152,7 @@
     var a = new Object()
     function Person(){}
     var a = Object.create(Person.prototype)
+
 >23.说下this的几种不同场景
 
 >24.JS中有哪些内置函数
@@ -573,8 +572,6 @@
 >15.SPA的作用
 
 
-
-
 理房通
 ===================================
 >1。一个div有宽高，在浏览器中垂直居中
@@ -693,8 +690,6 @@ react
 =================
 
 1.redux中的状态是怎么绑定道组件中去的？
-
-
 
 
 需要复习的点
@@ -829,7 +824,7 @@ react
 - AMD+require.js CMD+sea.js。AMD在使用前就准备好，CMD是用到了再去准备模块
 
 
->8.正则表达式[参考](https://c.runoob.com/front-end/854)
+>8.正则表达式[参考](https://c.runoob.com/front-end/854) [正则练习](https://leaverou.github.io/regexplained/)
 
 - `\w`表示`[a-zA-Z0-9]`
 
@@ -849,4 +844,5 @@ react
 
 - var pattern = /\d{3,5}/;  `pattern.test(str)`  `str.match(pattern)`  `str.replace(pattern)`
             
+-  大于0的六位整数，且两位小数 `/^[1-9]\d{5}(\.\d{1,2})?$/g`
 

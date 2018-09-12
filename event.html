@@ -9,19 +9,24 @@
 	
 	<script type="text/javascript">
 		function fun1(){
+            // 如果没有使用apply的话，指向window，如果适用apply的话，指向<a></a>
             console.log(this, 'fun1');
 			console.log("111");
-		}
+        }
+        
 		function fun2(){
 			console.log("222");
 		}
 		
 		var btn = document.getElementById("btn1");
         
-        // btn.onclick = function () {
-        //     console.log(this, 'onclick');
-        // }
+        btn.onclick = function () {
+            // this指向<a></a>标签
+            console.log(this, 'onclick');
+        }
+
 		btn.addEventListener("click",function(){
+            // this指向<a></a>标签
             console.log(this, 'addEventListener');
 			console.log("333");
 		});
