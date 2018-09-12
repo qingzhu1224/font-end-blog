@@ -875,4 +875,29 @@ react
 
 - 事件是先捕捉后冒泡
 
-- 
+>11.fetch、axios、以及ajax区别
+
+
+>12.Load 和 DOMContentLoaded 区别
+
+- `Load`事件触发代表页面中的DOM\CSS\JS\图片已经全部加载完毕
+
+- `DOMContentLoaded`事件触发代表初始的HTML被完全加载和解析，不需要等待CSS、JS、图片加载
+
+>13.重绘（repaint）和回流(reflow)
+
+- 重绘是当节点需要更改外观而不会影响布局的，比如改变 color 就叫称为重绘
+
+- 回流是布局或者几何属性需要改变就称为回流。
+
+- 使用 visibility(visible|hidden) 替换 display: none ，因为前者只会引起重绘，后者会引发回流（改变了布局）
+
+- 把 DOM 离线后修改，比如：先把 DOM 给 display:none (有一次 Reflow)，然后你修改100次，然后再把它显示出来
+
+- 不要把 DOM 结点的属性值放在一个循环里当成循环里的变量
+
+- 不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局
+
+- CSS 选择符从右往左匹配查找，避免 DOM 深度过深
+
+- 将频繁运行的动画变为图层，图层能够阻止该节点回流影响别的元素。比如对于 video 标签，浏览器会自动将该节点变为图层。
