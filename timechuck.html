@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>控件</ul>
+  <script>
+    var arr = [];
+    for (var i = 1; i < 100000; i ++) {
+        arr.push(i);
+    }
+    let ul = document.querySelector("ul");
+    var renderStaff = function(n) {
+        var li = document.createElement('li');
+        li.innerHTML = n;
+        ul.appendChild(li);
+    };
+    var timeChunk = function(arr, fn, count) {
+        var obj, t;
+        var len = arr.length;
+        var start = function() {
+            console.log('hello')
+            for (var i = 0; i < Math.min(count || 1, arr.length); i ++) {
+                var obj = arr.shift();
+                fn(obj);
+            }
+        };
+        return function() {
+            t = setInterval(function() {
+                if (!arr.length) {
+                    return clearInterval(t);
+                }
+                start();
+            }, 200);
+        };
+    };
+    var renderFriendList = timeChunk(arr, renderStaff, 8)
+    renderFriendList();
+  </script>
+</body>
+</html>

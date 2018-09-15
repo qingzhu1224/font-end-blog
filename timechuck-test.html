@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>控件</ul>
+  <script>
+      const ulDom = document.querySelector('ul');
+      const data = new Array(1000).fill('1').map((item,idx) => `${idx+1}`);
+      const renderItem = (item) => {
+          const li = document.createElement('li');
+          li.innerHTML = item;
+          ulDom.appendChild(li);
+      }
+      const timechuck = (data, fn, count) => {
+          let t;
+          const start = () => {
+            for(let i =0; i<Math.min(count || 1, data.length); i++) {
+                const obj = data.shift();
+                fn(obj)
+            }
+          }
+          return () => {
+                t = setInterval(() => {
+                if(!data.length) clearInterval(t);
+                start();
+            }, 100)
+          }
+      }
+      const render = timechuck(data, renderItem, 8);
+      render();
+  </script>
+</body>
+</html>
