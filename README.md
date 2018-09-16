@@ -383,10 +383,26 @@
 
 **安全方面**
 --------------
->1.[XSS，怎样预防]（https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)） 
-    XSS为跨站脚本（cross site script），为了不和css重复，故叫XSS.    
-    防御方式：1.使用转义，把&、>、< 等转义；2.使用innerText，不使用innerHTML 3.JSON.parse() 
+>1.[XSS，怎样预防]（https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+
+- XSS主要是修改`HTML`节点或者执行`JS`代码来攻击网站。
+    
+- XSS为跨站脚本（cross site script），为了不和css重复，故叫XSS.    
+    
+- 防御方式：1.使用转义，把&、>、< 等转义；2.使用innerText，不使用innerHTML 3.JSON.parse() 
+
 >2.CRFS
+
+- `CRFS是指利用用户的登录态发起恶意请求`。
+
+- Get 请求不对数据进行修改
+
+- 不让第三方网站访问到用户 Cookie
+
+- 阻止第三方网站请求接口
+
+- 请求时附带验证信息，比如验证码或者 token
+
 
 >3.跨域
 
@@ -906,4 +922,7 @@ react
 
 >15.怎么画出1px
 
->16.
+>16.密码安全 `加盐`也就是给原密码添加字符串，增加原密码长度。但是加盐并不能阻止别人盗取账号，只能确保即使数据库泄露，也不会暴露用户的真实密码。一旦攻击者得到了用户的账号，可以通过暴力破解的方式破解密码。对于这种情况，通常使用`验证码增加延时`或者`限制尝试次数的方式`。`并且一旦用户输入了错误的密码，也不能直接提示用户输错密码，而应该提示账号或密码错误`。
+
+
+
