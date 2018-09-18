@@ -438,7 +438,7 @@
 
 >14.immutable用法
 
->15.网站错误收集 onError
+>15.网站错误收集 onError  `收集用户报错还是比较简单的，利用 window.error 事件，然后根据 Source Map 定位到源码（但一般查不出什么）` [参考](https://github.com/kenberkeley/redux-simple-tutorial)
 
 >15.fetch请求，超过5秒后，前端返回，已超时，写出代码。[参考](https://stackoverflow.com/questions/46946380/fetch-api-request-timeout/50096215#50096215)     
     
@@ -940,5 +940,7 @@ react
 - `Proxy`用于修改某些操作的默认行为
 
 - 
+
+
 
 
