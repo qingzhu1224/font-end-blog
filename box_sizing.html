@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>盒子模型</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .div1{
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+
+        margin-bottom: 20px;
+        padding: 20px;
+        box-sizing: content-box;
+    }
+    .div2{
+        width: 200px;
+        height: 200px;
+        border: 2px solid green;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>

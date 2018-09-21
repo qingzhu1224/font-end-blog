@@ -17,7 +17,19 @@
 
 >2.flex
 
->3.盒子模型
+>3.盒子模型 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing) [知乎](https://www.zhihu.com/question/62017043) [掘金](https://juejin.im/post/59ef72f5f265da4320026f76)
+
+- 盒子模型包括IE盒子模型和标准盒子模型
+
+- IE盒子模型中的width = content + padding + border
+
+- 标准盒子模型中的width = content
+
+- box-sizing: border-box/content-box
+
+- 盒子模型都不包括外边距，如果加上外边距，表示盒子占据大小
+
+- IE8+是标准盒子模型，IE6\IE7\IE8为怪异模型
 
 >4.清除浮动
 
@@ -70,6 +82,8 @@
 >28.src和herf区别
 
 >29.`padding: 100%`，表示按照最近的父元素块的宽度来定;
+
+>30.css换肤
 
 
 
@@ -247,7 +261,7 @@
     4. 4** 客户端错误     请求包含语法错误或无法完成请求
     5. 5** 服务端错误   服务器在处理请求的过程中发生了错误
 
->2.get和post区别
+>2.get和post区别  请求方法（option）
 
 >3.http方法
 
@@ -264,8 +278,7 @@
     1.从大小方面
     2.每次请求是否携带
     3.从安全方面
-    4.从有效期方面
-
+    4.从有效期方面v
 
 **算法题目**
 -----------------
@@ -436,7 +449,9 @@
 
 >13.怎样实现单点登录
 
->14.immutable用法
+>14.immutable用法 [参考](https://github.com/camsong/blog/issues/3)
+
+- Immutable Data 就是一旦创建，就不能再被更改的数据。对Immutable对象的任何修改或添加删除操作都会返回一个新的Immutable对象。Immutable实现的原理是Persistent Data Structure(持久化数据结构)，也就是使用旧数据创建新数据时，要保证旧数据同时可用且不变。同时为了避免deepCopy把所有节点都复制一遍带来的性能损耗，immutable使用了Structural Sharing(结构共享)，即如果对象树中一个节点发生变化，只修改这个节点和受它影响的父节点，其他节点则进行共享。
 
 >15.网站错误收集 onError  `收集用户报错还是比较简单的，利用 window.error 事件，然后根据 Source Map 定位到源码（但一般查不出什么）` [参考](https://github.com/kenberkeley/redux-simple-tutorial)
 
@@ -511,7 +526,13 @@
 
 >5.垂直居中（无宽度和高度）
 
->6.vue-router实现原理  
+>6.vue-router实现原理
+
+- 分为两种模式：hash和history
+
+- hash主要是带有"#"号，并且#号后面的信息不发送给服务器，主要使用onhashchange事件来监听路由的变化
+
+- history主要使用的是go\back\forward\onpushState\
 
 >7.输出a的值
        
@@ -939,7 +960,28 @@ react
 
 - `Proxy`用于修改某些操作的默认行为
 
-- 
+-
+
+>18.遍历树 
+
+
+#### panshi ####
+
+>1.组件的理解，组件和继承、以及多态
+
+>2.flex的考察和理解
+
+>3.push
+
+>4.浏览器存储
+
+>5.vue和react的比较以及选择
+
+>6.标准盒子模型
+
+>7.【0，7】之间的随机数
+
+>8.最近遇到的困哪
 
 
 
