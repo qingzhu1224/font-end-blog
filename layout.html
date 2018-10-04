@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>布局问题</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        /** 设置这个body的高度才是整个屏幕*/
+        height: 100%;
+    }
+    body{
+        height: 100%;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .first, .second, .third{
+        border: 1px solid red;
+        background-color: #ddd;
+        /** 计算width时，使用到calc()*/
+        margin: 0px 60px;
+        width: calc((100%-360px)/3);
+        height: 50%;
+    }
+    .second{
+        border-radius: 5px;
+    }
+   .third{
+       position: relative;
+       line-height: 1.4em;
+       overflow: hidden;
+   }
+   .third::after{
+       content: '...';
+       font-weight: bold;
+       position: absolute;
+       bottom: 0;
+       right: 0;
+   }
+   /** 媒体查询 */
+   @media only screen and (max-width: 600px) {
+        .first, .second, .third{
+            margin: 0px;
+            width: calc((100%)/3);
+        }
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="first">A</div>
+        <div class="second">B</div>
+        <div class="third">`事件捕获`, 通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器
+                会从根节点开始由外到内进行`事件传播`，
+                即点击事件捕获`, 通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根
+                节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素通过事
+                件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。`事件捕获`, 通俗的理解就是，当鼠标点
+                击或者触发dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，事件捕获`, 通俗的理解就是，当鼠标点击
+                或者触发dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素通过事件
+                捕获方式注册了对应的事件的话，会先触发父元素事件
+                捕获`, 通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会
+                从根节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素
+                通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。`事件捕获`, 通俗
+                的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，即点击了子元素，如果
+                父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。绑定的事件。`事件捕获`, 通俗的理解就
+                是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素通过事件
+                捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。即点击了子元素，如果父元素通过事件捕获方
+                式注册了对应的事件的话，会先触发父元素绑定的事件。了子元素，如果父元素通过事件捕获方式注册了对应的事
+                件的话，会先触发父元素绑定的事件。`事件捕获`, 通俗的理解就是，当鼠标点击或者触发
+                dom事件时，浏览器会从根节点开始由外到内进行`事件传播`，即点击了子元素，如果父元素通过
+                事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。
+        </div>
+    </div>
+</body>
+</html>

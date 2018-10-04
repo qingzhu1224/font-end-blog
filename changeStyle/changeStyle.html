@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>换肤</title>
+<link href="./blue.css" rel="stylesheet" type="text/css" id="skinColor"/>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .blue,.yellow{
+        width: 100px;
+        height: 30px;
+        border: 1px solid black;
+        margin: 20px;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var blueButton = document.getElementsByClassName('blue')[0];
+        var linkDom = document.getElementById('skinColor');
+        blueButton.onclick = function() {
+            console.log('hello')
+            linkDom.setAttribute('href', './blue.css')
+        }
+        var yellowButton = document.getElementsByClassName('yellow')[0];
+        yellowButton.onclick = function() {
+            console.log('world')
+            linkDom.setAttribute('href', './yellow.css')
+        }
+    }
+</script>
+<body>
+   <div class="blue">
+       blue
+   </div>
+   <div class="yellow">
+       yellow
+   </div>
+</body>
+</html>

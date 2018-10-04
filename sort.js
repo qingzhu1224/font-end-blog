@@ -15,7 +15,7 @@ const quickSort = (arr, _left, _right) => {
             right --;
             arr[left] = arr[right];
             while(left < right && temp >= arr[left])
-            left ++;
+            left ;
             arr[right] = arr[left];
         }
         arr[right] = temp;
