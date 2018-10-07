@@ -378,9 +378,11 @@
 
 - 异步同步问题[参考1](http://imweb.io/topic/5b189d04d4c96b9b1b4c4ed6) [参考2](https://juejin.im/post/5b45c57c51882519790c7441) [参考3](https://segmentfault.com/a/1190000003969996)
 
-- 批量更新问题
+- 批量更新问题 [参考](https://blog.csdn.net/u011262847/article/details/79180622)
 
 - 操作数据[参考](https://juejin.im/entry/59522bdb6fb9a06b9a516113)
+
+- react以及setState中为什么使用不可变数据？[参考](https://www.jianshu.com/p/c6257cbef1b1).一方面方便管理和调试，另一方面是出于性能的考虑，shouldComponentUpdate.
 
 >7.react如何加载组件，并说出生命周期
 
