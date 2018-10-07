@@ -384,6 +384,8 @@
 
 - react以及setState中为什么使用不可变数据？[参考](https://www.jianshu.com/p/c6257cbef1b1).一方面方便管理和调试，另一方面是出于性能的考虑，shouldComponentUpdate.
 
+- ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/setState.png)
+
 >7.react如何加载组件，并说出生命周期
 
 >8.action的好处
