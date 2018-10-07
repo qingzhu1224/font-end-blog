@@ -79,7 +79,7 @@
 
 >27.special value | computed value | used value区别
 
->28.src和herf区别
+>28.src和herf区别 [参考](https://segmentfault.com/a/1190000010286056)
 
 - `src用于使用外部资源填充/替换对应的元素`。浏览器遇到img标签将会停止页面的加载与解析，直到浏览器加载完图片。`img/script`
 
@@ -373,6 +373,14 @@
 >5.受控组件：、input或select都要绑定一个change事件;每当表单的状态发生变化,都会被写入组件的state中,这种组件在React中被称为受控组件;
 
 >6.setState机制
+
+- [参考](https://juejin.im/post/5b45c57c51882519790c7441)
+
+- 异步同步问题[参考1](http://imweb.io/topic/5b189d04d4c96b9b1b4c4ed6) [参考2](https://juejin.im/post/5b45c57c51882519790c7441) [参考3](https://segmentfault.com/a/1190000003969996)
+
+- 批量更新问题
+
+- 操作数据[参考](https://juejin.im/entry/59522bdb6fb9a06b9a516113)
 
 >7.react如何加载组件，并说出生命周期
 
