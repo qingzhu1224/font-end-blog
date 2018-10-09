@@ -65,6 +65,8 @@
 
 - ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/triangle.png)
 
+- 原理是边角被两条边平分，并使用transparent为透明
+
 >16.1px的，小于12px的字
 
 >17.px em rem区别
