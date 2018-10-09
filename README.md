@@ -63,7 +63,7 @@
             border-color: red transparent transparent transparent;
         }
 
-- 画出三角形的原理是border为
+- ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/triangle.png)
 
 >16.1px的，小于12px的字
 
