@@ -55,6 +55,16 @@
 
 >15.三角形
 
+        .content{
+            width: 0;
+            height:0;
+            border-width: 100px;
+            border-style: bold;
+            border-color: red transparent transparent transparent;
+        }
+
+- 画出三角形的原理是border为
+
 >16.1px的，小于12px的字
 
 >17.px em rem区别
@@ -93,6 +103,11 @@
 
 - 使用cookie记住用户的设置情况
 
+>31.伪元素和伪类的区别
+
+- [参考](http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/)
+
+- 伪类的操作对象是文档树中已有的元素，而伪元素则创建了一个文档数外的元素。因此，伪类与伪元素的区别在于：有没有创建一个文档树之外的元素。
 
 **javascript**
 -------------
@@ -648,8 +663,6 @@
 四
 ===================================
 >1。一个div有宽高，在浏览器中垂直居中
-
->2.css画一个三角形
 
 >3.读程序题目    
 
