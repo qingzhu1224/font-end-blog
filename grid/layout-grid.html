@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XSS prevent</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    html,body{
+        height: 100%;
+    }
+    div{
+        border: 1px solid red;
+    }
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .header{
+        grid-column: span 12;
+    }
+    .menu{
+        grid-column: span 2;
+    }
+    .content{
+        grid-column: span 10;
+    }
+    .footer{
+        grid-column: span 12;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">1</div>
+        <div class="menu">2</div>
+        <div class="content">3</div>
+        <div class="footer">4</div>
+    </div>
+</body>
+</html>

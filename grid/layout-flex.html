@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XSS prevent</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    html,body{
+        height: 100%;
+    }
+    div{
+        border: 1px solid red;
+    }
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .center{
+        display: flex;
+    }
+
+    .menu{
+        width: 100px;
+        flex: 0 0 auto;
+    }
+    .content{
+        flex: 1 1 auto;
+    }
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">1</div>
+        <div class="center">
+            <div class="menu">2</div>
+            <div class="content">3</div>
+        </div>
+        <div class="footer">4</div>
+    </div>
+</body>
+</html>
