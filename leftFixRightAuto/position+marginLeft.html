@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XSS prevent</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    html, body{
+        height: 100%;
+    }
+    .container{
+        border: 1px solid red;
+        height: 100%;
+        position: relative;
+    }
+    .left{
+        height: 100%;
+        width: 200px;
+        margin-right: 20px;
+        border: 1px solid green;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+    .right{
+        height: 100%;
+        margin-left: 220px;
+        border: 1px solid green;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">hello, world</div>
+        <div class="right">hello, world</div>
+    </div>
+</body>
+</html>
