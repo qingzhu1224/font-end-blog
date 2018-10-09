@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XSS prevent</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    html, body{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+       display: flex;
+    }
+    .left{
+        width: 200px;
+        margin-right: 20px;
+        flex: 0 0 auto;
+    }
+    .left, .right{
+        height: 100%;
+        border: 1px solid green;
+    }
+    .right{
+        width: calc(100% - 220px);
+        flex: 1 1 auto;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">hello, world</div>
+        <div class="right">hello, world</div>
+    </div>
+</body>
+</html>
