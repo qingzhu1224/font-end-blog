@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>双向数据绑定</title>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+</style>
+<script>
+    window.onload=function() {
+        var data = {};
+        var InputDom = document.getElementById('input');
+        // 初始化
+        var TextDom = document.getElementById('text');
+        const newObj = new Proxy(data, {
+            get: function(target, key, receiver) {
+                console.log(`getting ${key}!`);
+                return Reflect.get(target, key, receiver);
+            },
+            set: function(target, key, value, receiver) {
+                    debugger
+                    console.log(target, key, value, receiver);
+                    if (key === 'text') {
+                        input.value = value;
+                        TextDom.innerHTML = value;
+                    }
+                    return Reflect.set(target, key, value, receiver);
+                },
+        });
+        var ContainerDom = document.getElementById('container');
+        ContainerDom.addEventListener('keyup', function(e){
+            var target = e.target;
+            if(target.nodeName.toUpperCase() === 'INPUT') {
+                debugger
+                newObj.text = e.target.value;
+                console.log(e.target.value)
+            }
+        });
+    }
+</script>
+</head>
+<body>
+   <div id="container">
+       请输入：<input type="text" id="input" value='133'>
+       <p id="text"></p>
+   </div>
+</body>
+</html>
