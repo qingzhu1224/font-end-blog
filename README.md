@@ -372,6 +372,10 @@
             return arr;
         }
 
+
+![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/quickSort.jpg)
+
+
 >2.一个数组对象，依照某个字段排序，并取出排第一位的（第一位考虑多个）（新浪面试题）
 
 >3.数组去重
