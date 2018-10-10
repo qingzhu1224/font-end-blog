@@ -1036,4 +1036,4 @@ react
 
 ####redux####
 
-![图片]()
+![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/redux.jpg)
