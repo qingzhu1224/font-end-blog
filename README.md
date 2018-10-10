@@ -241,7 +241,19 @@
 
 >5.阻止默认事件
 
+        if(event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+        }
+
 >6.阻止冒泡
+
+        if(event.stopProgration){
+            event.stopProgration();
+        } else {
+            event.cancelBubble = true;
+        }
 
 >7.冒泡和事件捕获
 
