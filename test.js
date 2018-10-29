@@ -212,3 +212,22 @@ console.log(sum(2,3));   // Outputs 5
 console.log(sum(2)(3));  // Outputs 5
 
 function sum()
+
+
+
+let x = 0;
+async function test() {
+    x += await 2;
+    console.log(x);
+}
+test()
+x +=1;
+console.log(x)
+
+
+new Promise(resolve => {
+    resolve(1);
+    Promise.resolve().then(() => console.log(2));
+}).then(t => console.log(t));
+
+console.log(3);

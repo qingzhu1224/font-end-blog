@@ -15,7 +15,7 @@
             // configurable: true,
             // enumerable: true,
             // writable: true,
-            value: 'input',
+            // value: 'input',
             set: function(newValue) {
                 var TextDom = document.getElementById('text');
                 TextDom.innerHTML = newValue;
@@ -33,11 +33,11 @@
             }
         });
 
-        var InputDom = document.getElementById('input');
-        InputDom.innerHTML = data.text;
-        // 初始化
-        var TextDom = document.getElementById('text');
-        TextDom.innerHTML = data.text;
+        // var InputDom = document.getElementById('input');
+        // InputDom.innerHTML = data.text;
+        // // 初始化
+        // var TextDom = document.getElementById('text');
+        // TextDom.innerHTML = data.text;
 
     }
 </script>

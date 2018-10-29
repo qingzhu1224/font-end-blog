@@ -409,6 +409,8 @@
 
 - [参考](https://juejin.im/post/5b45c57c51882519790c7441)
 
+- [参考](https://segmentfault.com/a/1190000014442208)
+
 - 异步同步问题[参考1](http://imweb.io/topic/5b189d04d4c96b9b1b4c4ed6) [参考2](https://juejin.im/post/5b45c57c51882519790c7441) [参考3](https://segmentfault.com/a/1190000003969996)
 
 - 批量更新问题 [参考](https://blog.csdn.net/u011262847/article/details/79180622)
@@ -1037,3 +1039,24 @@ react
 ####redux####
 
 ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/redux.jpg)
+
+
+- 写一个log方法，代理console.log
+
+        function log() {
+            console.log.apply(console, arguments);
+        }
+
+
+
+#### react ####
+
+- connet
+
+- vue里双向绑定中使用Object.defineProperty()里对数组的处理
+
+- 中间件
+
+- 高阶组件
+
+- 
