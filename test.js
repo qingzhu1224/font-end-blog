@@ -231,3 +231,77 @@ new Promise(resolve => {
 }).then(t => console.log(t));
 
 console.log(3);
+
+
+
+a()
+function a() {
+    new Promise((resolve, reject) => {
+        console.log(1);
+        resolve(2)
+    }).then(() => {
+        console.log(3)
+    })
+}
+console.log(4)
+
+
+
+(function test(){
+    setTimeout(function(){console.log(4)}, 0);
+    new Promise(function executor(resolve){
+        console.log(1);
+        for(var i =0;i<1000;i++) {
+            i == 999 && console.log(i)
+        }
+        // resolve('kkk')
+        console.log(2)
+
+    }).then(function(){
+        console.log(5);
+    })
+    console.log(3)
+})()
+
+
+
+var i = 4;
+for(;i;i--) {
+    setTimeout(function() {
+        console.log(new Date(), i)
+    }, 1000)
+}
+console.log(new Date(), i);
+
+
+function Point(){
+    this.x = 0;
+    this.y = 0
+}
+
+function Radius() {
+    this.r = 5;
+}
+
+Point.prototype.move = function(x, y) {
+    this.x += x;
+    this.y += y;
+    console.info('Point moved')
+}
+
+function Circle() {
+    Point.call(this);
+    Radius.call(this);
+}
+
+Circle.prototype = Object.create(Point.prototype);
+
+Circle.prototype.constructor = Circle;
+
+var c = new Circle();
+
+console.log('1', c instanceof Circle)
+
+console.log('2', c instanceof Point)
+
+console.log('3', c instanceof Radius)
