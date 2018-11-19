@@ -5,3 +5,5 @@
 - v-modal 的使用说明
 
 - vue中data必须返回一个函数 [code](https://codesandbox.io/s/l29l21ylo9)
+
+- vue注册全局组件 [code](https://codesandbox.io/s/l29l21ylo9), 结合webpack可同时注册多个组件[code](https://github.com/chrisvfritz/vue-enterprise-boilerplate/blob/master/src/components/_globals.js)
