@@ -26,6 +26,8 @@
 
       {"eslint.autoFixOnSave": true,}
 
+- Package.json配置
+
 - 以上步骤就设置成功了。
 
 ### 问题排查 ###
@@ -42,3 +44,5 @@
 
   - eslint 的 html 插件是否正确安装
   ！[图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/eslintFlag.png)
+
+- 特别注意右下角的Eslint是否显示正常
