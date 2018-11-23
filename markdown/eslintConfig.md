@@ -41,3 +41,4 @@
   - vscode 的配置文件中 vue 文件是否关联到了 eslint
 
   - eslint 的 html 插件是否正确安装
+  ！[图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/eslintFlag.png)
