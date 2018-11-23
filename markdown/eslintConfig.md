@@ -28,6 +28,8 @@
 
 - Package.json配置
 
+![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/eslintPackage.png)
+
 - 以上步骤就设置成功了。
 
 ### 问题排查 ###
@@ -43,6 +45,9 @@
   - vscode 的配置文件中 vue 文件是否关联到了 eslint
 
   - eslint 的 html 插件是否正确安装
-  ！[图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/eslintFlag.png)
+  
+  ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/eslintFlag.png)
 
 - 特别注意右下角的Eslint是否显示正常
+
+- 如果全局安装eslint，其他插件也需要全局安装，如果eslint是局部，其他也是局部， [参考](https://github.com/standard/eslint-config-standard/issues/84)
