@@ -1090,3 +1090,20 @@ react
 
 - promise
 
+
+##### undefined、null以及{} 怎样判断 #####
+
+- undefined 表示根本不存在定义。
+
+- null 表示一个值被定义了，定义为“空值”；
+
+- {}表示该值为空白对象
+
+- 校验{}可以使用
+
+        Object.keys({}).length === 0
+
+        JSON.stringify({}) === '{}'
+
+
+
