@@ -1106,4 +1106,69 @@ react
         JSON.stringify({}) === '{}'
 
 
+##### vue和react区别 #####
+
+- 相似之处
+
+    - 虚拟DOM
+
+    - 提供了响应式和组件化的视图组件
+
+    - git@github.com:airbnb/react-sketchapp.git
+
+- 区别
+
+    - JSX和template
+
+    - css
+
+    - 双向数据绑定和setState
+
+    - 不变数据和可变数据
+
+cookie和localstorage区别
+
+- 大小
+
+- 是否携带
+
+- 安全
+
+- 有效期
+
+- 共同点，都是保存在浏览器端
+
+##### 题目  #####
+
+- 怎么使用setTimeout实现setInterval，可以使用递归
+
+
+
+##### 学习  #####
+
+- freecodecamp
+
+- [vscode插件](https://github.com/wulang8353/DO-THE-JS-BETTER/issues/8)
+
+
+
+##### ali #####
+
+- 前后端通信方式有哪几种
+
+- websocket用的原生的还是框架，如果断网的话，怎么处理
+
+- 闭包问题
+
+- 虚拟DOM
+
+- 父组件发生变换后，子组件的props没变，子组件会不会render，答案是react会render，但在浏览器中DOM不会重绘和重排
+
+- vue和react区别，vue是怎么处理react的一些生命周期的
+
+
+
+
+
+
 
