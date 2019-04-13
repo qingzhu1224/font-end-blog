@@ -1,5 +1,7 @@
 ### canvas模拟出环形图 ###
 
+- ![图片](https://github.com/qingzhu1224/font-end-blog/blob/master/imgs/echart-canvas.png)
+
 
         var canvas = document.getElementById("deviceMaintenance");
         var ctx = canvas.getContext("2d");
