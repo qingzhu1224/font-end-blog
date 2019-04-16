@@ -56,15 +56,15 @@
         var tmpAngle = circleObj.startAngle;
         // 每次偏移量
         var xAngle = 0.8 * (Math.PI / 180);
-        var rander = function() {
-        if(tmpAngle >= circleObj.endAngle){
-        return;
-        }else if(tmpAngle + xAngle > circleObj.endAngle){
-        tmpAngle = circleObj.endAngle;
-        }else{
-        tmpAngle += xAngle;
-        }
-        _this.drawCircle(circleObj, tmpAngle);
-        requestAnimationFrame(rander);
+        var render = function() {
+            if(tmpAngle >= circleObj.endAngle){
+            return;
+            }else if(tmpAngle + xAngle > circleObj.endAngle){
+            tmpAngle = circleObj.endAngle;
+            }else{
+            tmpAngle += xAngle;
+            }
+            _this.drawCircle(circleObj, tmpAngle);
+            requestAnimationFrame(rander);
         };
-        rander()
+        render()
